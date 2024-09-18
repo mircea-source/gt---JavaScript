@@ -50,16 +50,15 @@ function calculate(operator) {
     resultSpan.textContent = result;
 }
 
-// Event listeners for each button
-document.getElementById("add").addEventListener("click", () => calculate("+"));
-document.getElementById("subtract").addEventListener("click", () => calculate("-"));
-document.getElementById("multiply").addEventListener("click", () => calculate("*"));
-document.getElementById("divide").addEventListener("click", () => calculate("/"));
-
 function clearFields() {
     document.getElementById('num1').value = '';
     document.getElementById('num2').value = '';
     document.getElementById('result-value').innerHTML = '<i class="fa fa-window-minimize fa-beat-fade"></i>';
     document.getElementById('result').style.color = 'black';
 }
-
+// Event listeners for each button
+document.getElementById("add").addEventListener("click", () => calculate("+"));
+document.getElementById("subtract").addEventListener("click", () => calculate("-"));
+document.getElementById("multiply").addEventListener("click", () => calculate("*"));
+document.getElementById("divide").addEventListener("click", () => calculate("/"));
+document.getElementById("clear").addEventListener("click", clearFields);

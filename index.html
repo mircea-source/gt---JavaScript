@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="container text-center">
         <div class="row">
@@ -18,26 +23,26 @@
                 <p class="text-center">Introdu două numere și alege operația dintre ele.</br>Butonul galben golește câmpurile.</p>
 
                 <form id="calculator" class="text-center"></form>
-                
-                    <input type="number" id="num1" class="form-control mb-3" placeholder="Primul număr">
-                    <input type="number" id="num2" class="form-control mb-3" placeholder="Al doilea număr">
 
-                    <div class="btn-group btn-group-lg me-2" role="group">
-                        <button id="add" type="button" class="btn btn-outline-secondary px-3"><i class="fa fa-plus"></i></button>
-                        <button id="subtract" type="button" class="btn btn-outline-secondary px-3" ><i class="fa fa-minus"></i></button>
-                        <button id="multiply" type="button" class="btn btn-outline-secondary px-3"><i class="fa fa-times"></i></button>
-                        <button id="divide" type="button" class="btn btn-outline-secondary px-3"><i class="fa fa-divide"></i></button>
-                    </div>
-                    <div class="btn-group btn-group-lg" role="group">
-                        <button type="button" class="btn btn-warning" onclick="clearFields()"><i class="fa fa-trash"></i>
-                        </button>
-                    </div>
-                    
+                <input type="number" id="num1" class="form-control mb-3" placeholder="Primul număr">
+                <input type="number" id="num2" class="form-control mb-3" placeholder="Al doilea număr">
+
+                <div class="btn-group btn-group-lg me-2" role="group">
+                    <button id="add" type="button" class="btn btn-outline-secondary px-3"><i class="fa fa-plus"></i></button>
+                    <button id="subtract" type="button" class="btn btn-outline-secondary px-3"><i class="fa fa-minus"></i></button>
+                    <button id="multiply" type="button" class="btn btn-outline-secondary px-3"><i class="fa fa-times"></i></button>
+                    <button id="divide" type="button" class="btn btn-outline-secondary px-3"><i class="fa fa-divide"></i></button>
+                </div>
+                <div class="btn-group btn-group-lg" role="group">
+                    <button id="clear" type="button" class="btn btn-warning"><i class="fa fa-trash"></i>
+                    </button>
+                </div>
+
                 </form>
 
                 <div id="result" class="mt-4">
                     <h4>Rezultatul este: <span id="result-value"><i class="fa fa-window-minimize fa-beat-fade"></i></span></h4>
-                </div>   
+                </div>
 
             </div>
 
@@ -45,4 +50,5 @@
     </div>
 
 </body>
+
 </html>
