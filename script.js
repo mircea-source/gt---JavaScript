@@ -4,47 +4,50 @@ function calculate(operator) {
     const resultSpan = document.getElementById("result-value");
     document.getElementById("result").style.color = "black";
 
-if (isNaN(num1)) {
-    document.getElementById("num1").style.border = "2px solid red";
-    resultSpan.textContent = "Introdu un număr valid în primul câmp.";
-    return;
-} else {
-    document.getElementById("num1").style.border = "";
-}
+    function validateInput(inputId, errorMessage) {
+        const input = document.getElementById(inputId);
+        const value = parseFloat(input.value);
 
-if (isNaN(num2)) {
-    document.getElementById("num2").style.border = "2px solid red";
-    resultSpan.textContent = "Introdu un număr valid în al doilea câmp.";
-    return;
-} else {
-    document.getElementById("num2").style.border = "";
-}
-
-let result;
-
-switch (operator) {
-    case "+":
-    result = (num1 + num2).toFixed(2); // Round the result to 2 decimal places
-    break;
-    case "-":
-    result = (num1 - num2).toFixed(2); // Round the result to 2 decimal places
-    break;
-    case "*":
-    result = (num1 * num2).toFixed(2); // Round the result to 2 decimal places
-    break;
-    case "/":
-    if (num2 === 0) {
-        result = "împărțirea la zero nu este permisă.";
-        document.getElementById("result").style.color = "red";
-    } else {
-        result = (num1 / num2).toFixed(2); // Round the result to 2 decimal places
+        if (isNaN(value)) {
+            input.style.border = "2px solid red";
+            document.getElementById("result-value").textContent = errorMessage;
+            return false;
+        } else {
+            input.style.border = "";
+            return true;
+        }
     }
-    break;
-    default:
-    result = "Operator invalid";
-}
 
-resultSpan.textContent = result;
+    if (!validateInput("num1", "Introdu un număr valid în primul câmp.") ||
+        !validateInput("num2", "Introdu un număr valid în al doilea câmp.")) {
+        return;
+    }
+
+    let result;
+
+    switch (operator) {
+        case "+":
+            result = (num1 + num2).toFixed(2); // Round the result to 2 decimal places
+            break;
+        case "-":
+            result = (num1 - num2).toFixed(2); // Round the result to 2 decimal places
+            break;
+        case "*":
+            result = (num1 * num2).toFixed(2); // Round the result to 2 decimal places
+            break;
+        case "/":
+            if (num2 === 0) {
+                result = "împărțirea la zero nu este permisă.";
+                document.getElementById("result").style.color = "red";
+            } else {
+                result = (num1 / num2).toFixed(2); // Round the result to 2 decimal places
+            }
+            break;
+        default:
+            result = "Operator invalid";
+    }
+
+    resultSpan.textContent = result;
 }
 
 // Event listeners for each button
