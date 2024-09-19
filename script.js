@@ -1,16 +1,16 @@
 function calculate(operator) {
-    const num1 = parseFloat(document.getElementById("num1").value);
-    const num2 = parseFloat(document.getElementById("num2").value);
-    const resultSpan = document.getElementById("result-value");
-    document.getElementById("result").style.color = "black";
+    const num1 = parseFloat(document.querySelector("#num1").value);
+    const num2 = parseFloat(document.querySelector("#num2").value);
+    const resultSpan = document.querySelector("#result-value");
+    document.querySelector("#result").style.color = "black";
 
     function validateInput(inputId, errorMessage) {
-        const input = document.getElementById(inputId);
+        const input = document.querySelector(`#${inputId}`);
         const value = parseFloat(input.value);
 
         if (isNaN(value)) {
             input.style.border = "2px solid red";
-            document.getElementById("result-value").textContent = errorMessage;
+            document.querySelector("#result-value").textContent = errorMessage;
             return false;
         } else {
             input.style.border = "";
@@ -38,7 +38,7 @@ function calculate(operator) {
         case "/":
             if (num2 === 0) {
                 result = "împărțirea la zero nu este permisă.";
-                document.getElementById("result").style.color = "red";
+                document.querySelector("#result").style.color = "red";
             } else {
                 result = (num1 / num2).toFixed(2); // Round the result to 2 decimal places
             }
