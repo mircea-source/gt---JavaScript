@@ -1,4 +1,4 @@
-# Project Name
+# Simple calculator
 
 ## Description
 This project is a JavaScript application designed to simulate a simple calculator.
